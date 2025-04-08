@@ -1,0 +1,1 @@
+- The codes used in the project was adapted from https://github.com/openworm/hodgkin_huxley_tutorial

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 APR 2025 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 APR 2025 13:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -483,25 +483,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<./images/Sinf50A14.png, id=25, 505.89pt x 433.62pt>
+<./images/Sinf50A14.png, id=26, 505.89pt x 433.62pt>
 File: ./images/Sinf50A14.png Graphic file (type png)
 <use ./images/Sinf50A14.png>
-Package pdftex.def Info: ./images/Sinf50A14.png  used on input line 146.
+Package pdftex.def Info: ./images/Sinf50A14.png  used on input line 148.
 (pdftex.def)             Requested size: 177.06415pt x 151.76927pt.
-<./images/Sinf50A16.png, id=27, 505.89pt x 433.62pt>
+<./images/Sinf50A16.png, id=28, 505.89pt x 433.62pt>
 File: ./images/Sinf50A16.png Graphic file (type png)
 <use ./images/Sinf50A16.png>
-Package pdftex.def Info: ./images/Sinf50A16.png  used on input line 151.
+Package pdftex.def Info: ./images/Sinf50A16.png  used on input line 153.
 (pdftex.def)             Requested size: 177.06415pt x 151.76927pt.
-<./images/trianglef50A18.png, id=28, 505.89pt x 433.62pt>
+<./images/trianglef50A18.png, id=29, 505.89pt x 433.62pt>
 File: ./images/trianglef50A18.png Graphic file (type png)
 <use ./images/trianglef50A18.png>
-Package pdftex.def Info: ./images/trianglef50A18.png  used on input line 158.
+Package pdftex.def Info: ./images/trianglef50A18.png  used on input line 160.
 (pdftex.def)             Requested size: 177.06415pt x 151.76927pt.
-<./images/trianglef50A20.png, id=29, 505.89pt x 433.62pt>
+<./images/trianglef50A20.png, id=30, 505.89pt x 433.62pt>
 File: ./images/trianglef50A20.png Graphic file (type png)
 <use ./images/trianglef50A20.png>
-Package pdftex.def Info: ./images/trianglef50A20.png  used on input line 163.
+Package pdftex.def Info: ./images/trianglef50A20.png  used on input line 165.
 (pdftex.def)             Requested size: 177.06415pt x 151.76927pt.
 
 
@@ -516,16 +516,16 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 Here is how much of TeX's memory you used:
  12350 strings out of 473190
  195937 string characters out of 5715801
- 612819 words of memory out of 5000000
+ 613819 words of memory out of 5000000
  35444 multiletter control sequences out of 15000+600000
  566469 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,79p,537b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,537b,475s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Report.pdf (2 pages, 755701 bytes).
+Output written on Report.pdf (2 pages, 757869 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

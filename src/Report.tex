@@ -30,7 +30,7 @@
 \predate{\begin{center}\small}
 \postdate{\end{center}\vspace{-2ex}}
 
-\title{Hodgkin Huxley Current Injection Report}
+\title{Hodgkin-Huxley Current Injection Report}
 \author{Sam Tran}
 \date{\today}
 
@@ -91,10 +91,12 @@ where:
         \item Amplitude: From $1\mu\text{A}/cm^2$ to $5\mu\text{A}/cm^2$ with a step of $0.2\mu\text{A}/cm^2$
     \end{itemize}
 \end{multicols}
-\noindent The codes for sweeping different pairs of frequency and intensity and for generating this report are available in the following Github repository: \url{https://github.com/samsam2610/Sim4Life-Sweeping}
+\noindent The python codes to reproduce the following simulation results, along with the full result files, are available at the following link:
+\noindent \url{https://github.com/samsam2610/Hodgkin-Huxley-BME}
+\noindent .The codes was largely adapted from \url{https://github.com/openworm/hodgkin_huxley_tutorial}.
 
 \section*{Result}
-\noindent The following tables show the combinations of each waveform, amplitude, and frequency at which the lowest total absolute charges were required to produce an action potential with charge balanced.
+\noindent The following tables show the combinations of each waveform, amplitude ($Amp$), and frequency ($Freq$) at which the lowest total absolute charges ($AbsQ$) were required to produce an action potential with charge balanced. Since the step waveform is always charge inbalanced and has higher minimum total absolute charge, we will not include it in the table. 
 
 \begin{table}[H]
     \centering
