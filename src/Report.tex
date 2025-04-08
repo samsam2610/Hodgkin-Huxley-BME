@@ -1,0 +1,169 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{titling}
+\usepackage{multicol}
+\usepackage{subcaption}
+\graphicspath{ {./images/} }
+
+\geometry{margin=0.5in}
+% Adjust the vertical space above the title
+\setlength{\droptitle}{-5em} % Reduce as needed
+
+\pagestyle{fancy}
+\fancyhf{}
+% Customize title spacing and font size
+\pretitle{\begin{center}\Large}
+\posttitle{\par\end{center}\vspace{-2ex}}
+
+\preauthor{\begin{center}\small}
+\postauthor{\end{center}\vspace{-2ex}}
+
+\predate{\begin{center}\small}
+\postdate{\end{center}\vspace{-2ex}}
+
+\title{Hodgkin Huxley Current Injection Report}
+\author{Sam Tran}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section*{Method}
+
+% C_m=1, gmax_Na=120, gmax_K=36, gmax_L=0.3, E_Na=50,
+%                  E_K=-77, E_L=-54.387
+
+%                  gmax_Na=0.01486, gmax_K=0.0065, gmax_L=0.001, E_Na=60,
+%                  E_K=-90, E_L=-70
+
+\noindent The Hodgkin-Huxley model used in this simulation using original parameters for sodium and potassium channels by Hodgkin and Huxley, which are based on the squid giant axon with the following values:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item $C_m$ = 1 $\mu F/cm^2$
+        \item $g_{max,Na}$ = 120 mS/cm$^2$
+        \item $g_{max,K}$ = 36 mS/cm$^2$
+        \item $g_{max,L}$ = 0.3 mS/cm$^2$
+        \item $E_{Na}$ = 50 mV
+        \item $E_{K}$ = -77 mV
+        \item $E_{L}$ = -54.387 mV
+    \end{itemize}  
+\end{multicols}
+
+\noindent To determine the injecting current required to trigger an action potential in the axon, but with minimum amount of total absolute charges, we use the following equation to calculate the total absolute charges:
+\begin{equation}
+    Q = \int |I(t)|\, dt
+\end{equation}
+where:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item $Q$ is the total absolute charges
+        \item $I(t)$ is the injecting current at time $t$
+    \end{itemize}
+\end{multicols}
+\noindent To make sure that the injecting current is charge balance, we use the following equation:
+\begin{equation}
+    \text{Net Charge} = \int_{t_0}^{t_1} I(t)\, dt = 0
+\end{equation}
+where:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item $t_0$ is the start time of the simulation
+        \item $t_1$ is the end time of the simulation
+    \end{itemize}
+\end{multicols}
+
+\noindent From the above equations, we can see that the total absolute charges is the product of the injecting current and the time duration of the simulation, and independent of the frequency. Therefore, for our simulation, we will keep the duration constant, and change the amplitude, frequency and the waveform of the injecting current.
+\begin{multicols}{2}
+    \begin{itemize}
+        \item Duration: $200ms$
+        \item Frequency: $30Hz$, $40Hz$, $50Hz$, $100Hz$
+        \item Delta time: $0.001ms$
+        \item Delay: $100ms$
+        \item Waveforms: Step, Sinusoidal, Square, Triangle, Bi-phasic
+        \item Amplitude: From $1\mu\text{A}/cm^2$ to $5\mu\text{A}/cm^2$ with a step of $0.2\mu\text{A}/cm^2$
+    \end{itemize}
+\end{multicols}
+\noindent The codes for sweeping different pairs of frequency and intensity and for generating this report are available in the following Github repository: \url{https://github.com/samsam2610/Sim4Life-Sweeping}
+
+\section*{Result}
+\noindent The following tables show the combinations of each waveform, amplitude, and frequency at which the lowest total absolute charges were required to produce an action potential with charge balanced.
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    % First half of the table
+    \begin{tabular}{|c|c|c|c|}
+    \toprule
+    \textbf{$Waveform$} & \textbf{$Freq(Hz)$}& \textbf{$Amp(\mu\text{A}/cm^2) $}  & \textbf{$AbsQ$} \\
+    \midrule
+    sine	 &30 &2.2	 &0.28 \\
+    square	 &30 &1.4	 &0.28 \\
+    triangle  &30 &3.0	 &0.30 \\
+    biphasic &30 &2.4	 &0.48 \\
+    sine	 &40 &1.8	 &0.23 \\
+    square	 &40 &1.2	 &0.24 \\
+    triangle  &40 &2.4	 &0.24 \\
+    biphasic &40 &2.4	 &0.48 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Outputs of 30Hz and 40Hz}
+    \end{minipage}\hfill
+    % Second half of the table
+    \begin{minipage}[t]{0.45\textwidth}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \toprule
+    \textbf{$Waveform$} & \textbf{$Freq(Hz)$} & \textbf{$Amp(\mu\text{A}/cm^2) $}  & \textbf{$AbsQ$} \\
+    \midrule
+    sine	 &50 &1.6	 &0.20 \\
+    square	 &50 &1.2	 &0.24 \\
+    triangle  &50 &2.0	 &0.20 \\
+    biphasic &50 &2.4	 &0.48 \\
+    sine	 &100 &2.4	 &0.30 \\
+    square	 &100 &1.8	 &0.36 \\
+    triangle  &100 &2.8	 &0.28 \\
+    biphasic &100 &2.4	 &0.48 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Outputs of 50Hz and 100Hz}
+    \end{minipage}
+\end{table}
+
+\noindent From the results, we can see that the sine and triangle waveforms at 50Hz required the lowest total absolute charges to produce an action potential. The following figures show the resulting waveforms of the injecting current at the amplitude with the lowest total absolute charges to produce an action potential and another similar figure at 1 step (0.2 $\mu\text{A}/cm^2$) lower without producing action potential (AP). 
+\begin{multicols}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.35]{{Sinf50A14.png}}
+        \caption{Sine Wave at 50Hz and 1.4 $\mu\text{A}/cm^2$ without AP}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.35]{{Sinf50A16.png}}
+        \caption{Sine Wave at 50Hz and 1.6 $\mu\text{A}/cm^2$ with AP}
+    \end{figure}
+\end{multicols}
+\begin{multicols}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.35]{{trianglef50A18.png}}
+        \caption{Triangle Wave at 50Hz and 1.8 $\mu\text{A}/cm^2$ without AP}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.35]{{trianglef50A20.png}}
+        \caption{Triangle Wave at 50Hz and 2.0 $\mu\text{A}/cm^2$ with AP}
+    \end{figure}
+\end{multicols}
+
+
+\end{document}
